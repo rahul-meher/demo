@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '1.9.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
@@ -9,7 +9,7 @@ gem 'rails', '4.1.0'
 
 
 group :development do 
-gem 'sqlite3', '1.3.8'
+#gem 'sqlite3', '1.3.8'
 end
 
 # Use SCSS for stylesheets
@@ -37,7 +37,22 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
+#gem 'capistrano-rails', group: :development
+gem 'capistrano', '2.5.4'
+
+# rails specific capistrano funcitons
+gem 'capistrano-rails'
+
+# integrate bundler with capistrano
+#gem 'capistrano-bundler'
+
+# if you are using RBENV
+gem 'capistrano-rbenv'
+
+# Use the Unicorn app server
+#gem 'unicorn'
+
+
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
@@ -47,6 +62,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 
 group :production do
-  gem 'pg', '0.15.1'
+  #gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
 end
